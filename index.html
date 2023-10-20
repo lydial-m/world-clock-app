@@ -8,13 +8,42 @@
     <link rel="stylesheet" href="src/style.css" class="css" />
   </head>
   <body>
-    <h1>World Clock</h1>
-    <footer>
-      <a href="https://github.com/lydial-m/world-clock-app" target="_blank"
-        >Open-source code</a
-      >
-      by Lydia Lim
-    </footer>
+    <div class="container">
+      <h1>world clock</h1>
+      <select>
+        <option value="">select a city</option>
+        <option value="">melbourne, australia</option>
+        <option value="">new york, usa</option>
+        <option value="">paris, france</option>
+      </select>
+      <button class="location-button">B</button>
+      <div class="timezone-wrapper">
+        <div class="city">perth, australia</div>
+        <div class="date">fri, oct 20, 2023</div>
+        <div class="time">11:05:00 AM</div>
+      </div>
+      <div class="timezone-wrapper">
+        <div class="city">seoul, south korea</div>
+        <div class="date">fri, oct 20, 2023</div>
+        <div class="time">12:05:00 PM</div>
+      </div>
+      <div class="timezone-wrapper">
+        <div class="city">tokyo, japan</div>
+        <div class="date">fri, oct 20, 2023</div>
+        <div class="time">12:05:00 PM</div>
+      </div>
+      <div class="timezone-wrapper">
+        <div class="city">london, england</div>
+        <div class="date">fri, oct 20, 2023</div>
+        <div class="time">4:05:00 AM</div>
+      </div>
+      <footer>
+        <a href="https://github.com/lydial-m/world-clock-app" target="_blank"
+          >open-source code</a
+        >
+        by lydia lim
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>

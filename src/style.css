@@ -20,9 +20,6 @@ select {
   border-radius: 20px;
 }
 
-small {
-  font-size: 14px;
-}
 .container {
   max-width: 550px;
   margin: 20px auto;
@@ -64,9 +61,11 @@ small {
 }
 
 .time {
-  font-size: 25px;
+  font-size: 26px;
   text-align: right;
-  justify-content: center;
+}
+.time small {
+  font-size: 14px;
 }
 
 footer {

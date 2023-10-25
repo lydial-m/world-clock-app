@@ -50,5 +50,29 @@ function updateTime() {
   );
 }
 
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1].toLowerCase();
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
+  <div class="row align-items-center timezone-wrapper">
+            <div class="col-6">
+              <div class="location">
+                <span class="city">${cityName}</span>
+              </div>
+              <div class="date">${cityTime
+                .format("ddd, MMM D, YYYY")
+                .toLowerCase()}</div>
+            </div>
+            <div class="col-6 time">${cityTime.format(
+              "h:mm:ss [<small>]A[</small>]"
+            )}</div>
+          </div>`;
+}
+
 updateTime();
 setInterval(updateTime, 1000);
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);

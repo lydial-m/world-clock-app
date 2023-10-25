@@ -33,9 +33,6 @@ function showTimeZones() {
   citiesElement.innerHTML = citiesHTML;
 }
 
-showTimeZones();
-let refreshTime = setInterval(showTimeZones, 1000);
-
 function updateCity(event) {
   if (event.target.value !== "") {
     clearInterval(refreshTime);
@@ -57,8 +54,18 @@ function updateCity(event) {
               "h:mm:ss [<small>]A[</small>]"
             )}</div>
           </div>`;
+    returnElement.innerHTML = "return";
+    returnElement.addEventListener("click", returnToHome);
   }
 }
 
+function returnToHome(event) {
+  location.reload();
+}
+
+showTimeZones();
+let refreshTime = setInterval(showTimeZones, 1000);
+
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
+let returnElement = document.querySelector("#return");
